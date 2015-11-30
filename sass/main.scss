@@ -1,1 +1,67 @@
 // main SASS file
+@import 'variable';
+@import 'mixins';
+@import 'queries';
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    :after, :before {
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+    }
+}
+
+html{
+    font-size: 16px;
+    font-family: 'Josefin Sans', ‘Trebuchet MS’, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 ,h4 {
+    font-family: Cardo, ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.clearfix:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.bg-header {
+    background-color: $white;
+    background-color: $light-blue;
+    color: $dark-grey;
+    border-bottom:1rem solid #89C0C9;
+    border-top:1rem solid #3a5E63;
+    position: relative;
+    :before, :after {
+        content:"";
+    position:absolute;
+    bottom:-1rem;
+    width:30%;
+    height:1rem;
+    background-color: $dark-blue;
+    }
+    :before {
+        left: 0;
+    }
+    :after {
+        right: 0;
+    }
+}
+
+.bg-focal {
+    background-color: $light-brown;
+    color: $dark-brown;
+}
+.bg-content1 {
+    background-color: $white;
+    color: $dark-grey;
+}
